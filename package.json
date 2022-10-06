@@ -1,0 +1,25 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArmaturaD/myProject.git"
+  },
+  "author": "Denis Maturin <denis1986mr@icloud.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArmaturaD/myProject/issues"
+  },
+  "homepage": "https://github.com/ArmaturaD/myProject#readme",
+  "scripts": {
+    "test": "jest"
+  },
+  "description": "",
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "jest": "^29.1.2"
+  }
+}
