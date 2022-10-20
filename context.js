@@ -23,3 +23,15 @@ console.log("global",
 typeof somveribleItTheBlock,
 typeof someVariblelInTheFunction,
  variableInContext)
+
+ function test () {
+    b = 4
+    const a = b 
+ }
+ console.log(typeof a, typeof b) // в браузере выведеться что в намбер
+ 
+
+
+ (function selfInvokingFunction () {  // само запускающая функция 
+    const variableIn = 1;
+ } )()
