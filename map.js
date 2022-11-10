@@ -761,8 +761,8 @@ const users = [
 
 //console.log(filterUsers)
 
-const nameUsers = users.find((it) =>{     // фильтруем юзеров
-    return it.name === ('T')
-}) 
+const nameUsers = users.find((it, index) =>{     // фильтруем юзеров gпервой букве имени  users.find,filter,map
+    return it.name.indexOf ('D') === 0;
+}).name
 
 console.log(nameUsers)
