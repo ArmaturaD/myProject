@@ -115,4 +115,34 @@ const task7 = (arr) =>{
  }
 
  console.log(task9([2, 11, 5]))
- console.log(task9([1, 2, 3, 4 ,5]))
+ console.log(task9([1, 2, 3, 4 ,5])) 
+
+
+ //Task 10
+//Напишите функцию, которая принимает массив булевых значений и возвращает результат логичского И над ними. Использовать reduce
+//Логическое И - это операция &&
+// Input: [true,true,true,true]
+// Output: true
+// Input: [true,false,true]
+// Output: false
+
+const task10 = (arr) =>{
+    return arr.reduce ((acc, bool) =>{
+        return acc && bool
+    }, true)
+}
+console.log(task10([true,true,true,true]))
+console.log(task10([true,false,true]))
+
+//Task 11
+// Напишите функцию, которая принимает массив чего угодно и возвращает объект с полями {field1, field2, field3, field4}. Использовать reduce. Читайте описание наверху страницы, перед тем, как отчаиваться.
+// Input: [true,1,'wow','you are smart, bro']
+// Output: {field1: true, field2:1, field3: 'wow', field4: 'you are smart, bro'}
+
+const task11 = (arr) =>{
+    return arr.reduce((acc, rec, index)=>{
+return {... acc, [`field${index + 1}`] : rec}
+    }, {})
+}
+console.log(JSON.stringify(task11([true,1,'wow','you are smart, bro'])))
+console.log(task11([true,1,'wow','you are smart, bro']))
