@@ -146,3 +146,57 @@ return {... acc, [`field${index + 1}`] : rec}
 }
 console.log(JSON.stringify(task11([true,1,'wow','you are smart, bro'])))
 console.log(task11([true,1,'wow','you are smart, bro']))
+
+// Task 12
+// Напишите функцию, которая принимает объект, как аргумент и возвращает новый объект. Только с полями, у которых тип значения - строка;
+// Input: { name: 'pilot', isActive: true }
+// Actions:
+// Output: { name: 'pilot' }
+// Input: { isActive: true }
+// Actions:
+// Output: {}
+function test(param) {
+    const listKey = Object.keys (param)
+    const obj =  listKey.reduce ((acc, key) => {
+        if (typeof param[key] === 'string') {
+            return  { ...acc, [key]: param [key] }
+        } 
+        return acc
+    }, {})
+    return obj
+}
+    console.log (test({ name: 'pilot', isActive: true, first : " Valera" }))    
+ 
+
+//Task 13
+// Напишите функцию, которая принимает объект, как аргумент и возвращает новый массив с именами ключей - значение, которых false
+// Input: { isActive: false, isPilot: true }
+// Actions:
+// Output: ['isActive']
+ function task13 (paran) {
+    return Object.keys(paran)
+    .reduce((acc, rec) => {
+        if (paran [rec] === false){
+            return [ ...acc, rec]
+        }
+        return acc
+    }, [])
+    
+}console.log(task13({ isActive: false, isPilot: true }))
+
+//Task 14
+// Вам задан массив - верните среднее число массива. (сумма всех элементов деленное на количество элементов)
+// Input: [4, 6]
+// Actions:
+// Output: 5
+// Input: [2, 4]
+// Actions:
+// Output: 3
+
+function task14 (par){
+    const sum = par.reduce((acc ,rec) =>{
+        return acc +rec
+    } , 0)
+    return sum / par.length
+}
+console.log(task14([4,6]))
