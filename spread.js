@@ -1,5 +1,3 @@
-
-
 // const car = {
 //     model : "Audi",
 //     color : "green",
@@ -13,7 +11,7 @@
 // const carWithPassengers = {...car, model: "BMW",
 // passengers : ["PUPEL"],
 // driver : {
-//     ...car.driver, name : "Ivan", age: 25 
+//     ...car.driver, name : "Ivan", age: 25
 // }
 
 // }
@@ -25,10 +23,30 @@
 //     carWithPassengers
 // }
 
-function compileAndroidCode() {
-    throw new Error('you are using the wrong JDK!');
-  }
+// const shoppingList = [
+//   'diapers',
+//   'kleenex',
+//   'trash bags',
+//   'paper towels',
+//   'milk',
+// ]
 
-  module.exports ={
-    compileAndroidCode
-  }
+//   module.exports ={
+//     shoppingList
+
+//   }
+
+const myVehicle = {
+  brand: "Ford",
+  model: "Mustang",
+  sss: "red",
+};
+
+const updateMyVehicle = {
+  type: "car",
+  year: 2021,
+  color: "yellow",
+};
+
+const myUpdatedVehicle = { ...myVehicle, ...updateMyVehicle };
+console.log(myUpdatedVehicle);
