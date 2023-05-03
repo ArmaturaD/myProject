@@ -51,3 +51,13 @@ console.log(obj);
 // };
 // console.log(obj1[key]);
 // console.log(obj1);
+
+// symbol & dynamic key
+const user = {
+  id: 26,
+  age: 15,
+  date: 18,
+};
+const id = "new id";
+user[id] = 27;
+console.log(user);

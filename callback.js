@@ -33,3 +33,23 @@
 //    sub: process(1, 2, (a, b) => a - b),
 //    dblAdd: process(1, 2, (a, b) => (a + b) * 2),
 // })
+
+// const arr1 = [4, 6, 7, 8, 9, 10];
+
+// function squad(item) {
+//   return item ** 2;
+// }
+
+// //const arr2 = arr1.map(squad);
+// const arr2 = arr1.map((item) => item ** 2); // стрелочная запись
+// console.log(arr2);
+
+let min = 117;
+let max = 132;
+function getRanom() {
+  // const max = 132;
+  // const min = 117;
+  const rand = Math.floor(min + Math.random() * (max + 1 - min));
+  console.log(rand);
+}
+getRanom();
