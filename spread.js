@@ -67,11 +67,50 @@ const newArr = [
   { name: "user8", age: 28, height: 170 },
   { name: "user8", age: 28, height: 170 },
 ];
+
+// функція що приймає масив даних і виводить на екраню
+// за допомогою alert() привітанняб фкщо у вас більше ніж 100 users
 function congratsIfMoreThan100(arr) {
-  if (arr.length >= 1005) {
+  if (arr.length >= 10005) {
     return "hello";
   }
   return "bad";
 }
 
-console.log(congratsIfMoreThan100(newArr));
+//console.log(congratsIfMoreThan100(newArr));
+//Цикли    for
+const subscriders = [
+  { name: "Andrew", isClouseFriend: true },
+  { name: "Sasha", isClouseFriend: false },
+  { name: "Peter", isClouseFriend: false },
+  { name: "Vitaly", isClouseFriend: false },
+  { name: "Sara", isClouseFriend: true },
+  { name: "Bob", isClouseFriend: false },
+  { name: "Anna", isClouseFriend: false },
+  { name: "Inna", isClouseFriend: true },
+];
+// console.log(subscriders);
+
+// for (let i = 0; i < subscriders.length; i++) {
+//   console.log(subscriders[i]);
+// }
+
+//for of для елементів масиву item це єлемент масиву
+for (const item of subscriders) {
+  // console.log(item);
+}
+// for in для елементів об'єкту
+const obj = {
+  name: "Bob",
+  age: 25,
+  sex: "male",
+  nation: "Ukrainian",
+  hobby: "football",
+};
+
+for (const key in obj) {
+  // console.log(key); // виводимо ключи и перебераємо
+  console.log(obj[key]); //виводимо значення ключа
+}
+
+// while
