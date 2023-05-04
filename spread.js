@@ -137,7 +137,7 @@ function square(arr) {
   return arr;
 }
 const myArr = [2, 4, 6, 8];
-console.log(square(myArr));
+//console.log(square(myArr));
 
 const pow = (arr) => {
   for (let i = 0; i < arr.length; i += 1) {
@@ -145,3 +145,4 @@ const pow = (arr) => {
   }
   return arr;
 };
+console.log(pow(myArr));
