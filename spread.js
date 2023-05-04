@@ -110,7 +110,38 @@ const obj = {
 
 for (const key in obj) {
   // console.log(key); // виводимо ключи и перебераємо
-  console.log(obj[key]); //виводимо значення ключа
+  //  console.log(obj[key]); //виводимо значення ключа (obj.key не працюе)
 }
 
 // while
+
+let i = 0;
+while (i < subscriders.length) {
+  i++;
+  // console.log(subscriders[i]);
+}
+
+// while do обовязково виконається один раз
+let j = 0;
+do {
+  // console.log(subscriders[j]);
+  i++;
+} while (j > 0);
+
+// написати функцію яка приймає масив чисел i підносить до квадрату кожен з них
+
+function square(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i] * arr[i];
+  }
+  return arr;
+}
+const myArr = [2, 4, 6, 8];
+console.log(square(myArr));
+
+const pow = (arr) => {
+  for (let i = 0; i < arr.length; i += 1) {
+    arr[i] = Math.pow(arr[i], 2);
+  }
+  return arr;
+};
