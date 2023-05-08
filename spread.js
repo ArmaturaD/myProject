@@ -145,4 +145,90 @@ const pow = (arr) => {
   }
   return arr;
 };
-console.log(pow(myArr));
+//console.log(square(myArr));
+
+//написати ф-цію яка прифмає масив об'єктів.
+// пробгається по ньоиу і додає прикметники,
+// які описують зовнішню кпасу людини
+// відповідають до її статі  beautiful, Handsome
+
+const people = [
+  {
+    name: "Ross",
+    sex: "male",
+  },
+  {
+    name: "Monica",
+    sex: "female",
+  },
+  {
+    name: "Chandler",
+    sex: "male",
+  },
+  {
+    name: "Phoebe",
+    sex: "female",
+  },
+  {
+    name: "Joey",
+    sex: "female",
+  },
+  {
+    name: "Ross",
+    sex: "male",
+  },
+  {
+    name: "Rachel",
+    sex: "female",
+  },
+  {
+    name: "Bob",
+    sex: "male",
+  },
+];
+
+function addArr(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    const elemet = arr[i];
+    if (elemet.sex === "mail") {
+      elemet.name += " Handsome";
+    } else {
+      elemet.name += " Beautifule";
+    }
+  }
+  return arr;
+}
+//console.log(addArr(people));
+
+// Замикання (Closures)
+
+let firstName = "Vitaly";
+
+function sayHello() {
+  return firstName;
+}
+
+//firstName = 12346;
+
+//console.log(sayHello());
+
+firstName = " Andrew";
+//console.log(sayHello());
+
+// написати ф-цію яка приймає  2 аргумента масив чисел і число
+// функція повертає кількість повторюваності переданого числа в масиві.
+// Якщо данного числа там немає, функція повертає текс 'Даного числа в масиві немає!'
+
+//const number = [1, 2, 3, 5, 6, 7, 1, 3, 5, 8, 9, 9];
+
+function getRepetitionOfNumber(numberArr, number) {
+  let counter = 0;
+  for (item of numberArr) {
+    if (item === number) {
+      counter++;
+    }
+  }
+  return counter > 0 ? counter : "Даного числа в масиві немає!";
+}
+
+console.log(getRepetitionOfNumber([1, 2, 3, 5, 6, 7, 1, 3, 5, 8, 9, 9], 1));
